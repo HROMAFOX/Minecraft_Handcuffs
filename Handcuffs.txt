@@ -1,0 +1,69 @@
+cuff-type: BLAZE_ROD
+cuff-name: "Handcuffs"
+cuff-item:
+  ==: org.bukkit.inventory.ItemStack
+  type: BLAZE_ROD
+  v: 0 # to avoid legacy support
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: 'Handcuffs'
+right-click-cuff-side-effect-commands: []
+max-cuffed-per-person: 1
+drag-distance: 5
+drag-ticks: 10 # every 10 ticks -> twice a second
+drop-items-upon-cuff: true
+drop-item-target: GROUND # GROUND or DESPAWN or STORE
+cuffed-prisoner-bar-color: RED
+cuffed-guard-bar-color: GREEN
+allow-cuffs-without-tag: false # if set to true, players can simply craft and/or rename their items to match the cuffs
+use-quality-armory-vehicles: true
+use-vehicles-plugin: true
+use-bossbar-when-cuffed: true
+stop-interact-when-cuffed: false
+stop-pvp-when-cuffed: false
+allow-cuff-NPCs: false
+cuff-command-limitations:
+  only-within-same-world: false
+  within-radius: -1 # negative mean no radius gap
+uncuff-sign-commands: []
+cuffed-player-leave-commands:
+- "bc &8{player}&6 left while being cuffed by {from}"
+use-bstats: true
+messages:
+  player-not-found: "&cPlayer not found: &8{player}"
+  gave-player-cuffs: "&6Gave cuffs to &8{player}"
+  received-cuffs: "&cReceived a shiny pair of cuffs!"
+  player-being-cuffed: "&6You have been cuffed by &8{player}"
+  player-cuffing-other: "&6You have cuffed &8{player}"
+  player-uncuffing-other: "&6The cuffs from &8{player}&6 have been lifted"
+  player-already-dragging: "&6You are already cuffing &4{nr}&6 others, unable to cuff more"
+  player-being-uncuffed: "&6The cuffs from &8{player}&6 have been lifted"
+  player-not-cuffed: "&6The player &8{player}&6 is not cuffed by anyone!"
+  player-not-cuffed-by-you: "&6The player &8{player}&6 is not cuffed by you!"
+  uncuffed-player: "&6Uncuffed &8{player}&6!"
+  cuffed-cannot-interact: "&6You are cuffed and thus cannot use your inventory right now"
+  cuffed-cannot-pvp: "&6You are currendly cuffed an thus cannot PvP right now"
+  not-looking-at-sign: "You are not looking at a sign"
+  sign-already-marked: "This sign has already been marked as an uncuff sign"
+  not-dragging-anyone: "You are currently not dragging anyone and thus cannot use the uncuff sign"
+  sign-marked-for-uncuff: "The sign has successfully been marked as an uncuff sign"
+  set-cuff-item: "Set the new cuff item to the item in your hand"
+  no-item-to-set: "&cYou do not have an item in your hand to set as a cuff item!"
+  reloaded: "Reloaded the config"
+  player-immune: "&6Player &8{player}&6 is immune to cuffing"
+  already-cuffing: "&cYou have already cuffed &8{player}"
+  cannot-cuff-self: "&cYou cannot cuff yourself"
+  target-in-wrong-world: "&cYou cannot cuff somebody in a different world"
+  target-too-far: "&cThe target player is too far away"
+  not-allowed-to-cuff: "&cYou do not have permission to use cuffs right now"
+  items-dropped-on-uncuff-dragee: "&cNot all items fit in your inventory so &8{nr}&c of them were dropped"
+  items-not-dropping-upon-cuff: "&cItems are not set to drop upon cuffing"
+  dropper-strategy-no-store: "&cThe current dropper strategy does not allow storing of inventories"
+  dropper-no-stored-inventory: "&cThere does not seem to be an inventory for player &8{player}"
+  dropper-cleared-stored-inventory: "&cCleared the stored inventory of &8{player}"
+  target-dragging-you: "&cYou cannot drag this player because they are dragging you!"
+  log:
+    player-got-cuffs: "&8{player}&6 got cuffs from &7{from}"
+    player-cuffing-other: "&8{player} &6 is cuffing &7{other}"
+    player-uncuffing-player: "&8{player}&6 uncuffed &7{other}"
